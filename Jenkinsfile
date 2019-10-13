@@ -34,7 +34,7 @@ node {
             withCredentials([
                 string(credentialsId: "TEST_PASS", variable: 'TEST_PASS'),
                 string(credentialsId: "TEST_CRED", variable: 'TEST_CRED')]) {
-               {
+               dir('.') {
                 sh "echo ${params.env} $TEST_PASS $TEST_CRED"
                }
             }
