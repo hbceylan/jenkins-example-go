@@ -18,15 +18,11 @@ node {
 
         if (params.env!="prod" && params.env!="staging") {
           stage('Build') {
-            
                 sh "echo ${TEST_MESSAGE}"
             }
           stage('Build') {
-            
                 sh "go run main.go"
             }
-
-          }
         }
 
 
